@@ -8,6 +8,30 @@ body {
   margin-bottom: 0;
 }
 
+#header,.reciept,.text, #intro {
+  animation: load 0.35s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes imgLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* NAV */
 .nav {
   width: 100%;
@@ -15,24 +39,31 @@ body {
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 100;
+  z-index: 10;
 }
 
 #previous {
   height: 100%;
-  width: 40%;
+  width: calc(40% - 1px);
   left: 0;
-  cursor: w-resize;
+  cursor: url("../assets/icons/cursor-left.svg"), w-resize;
+}
+
+#previous:active {
+  background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 }
 
 #next {
   height: 100%;
-  width: 60%;
+  width: calc(60% - 2px);
   right: 0;
   position: absolute;
   top: 0;
-  cursor: e-resize;
+  cursor: url("../assets/icons/cursor-right.svg"), e-resize;
+}
 
+#next:active {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 }
 
 /* #RECIEPT */
@@ -132,7 +163,11 @@ h5 {
   padding-bottom: 1em;
 }
 
-h5 span {
+.counter:before {
+  content: "$";
+}
+
+.counter {
   float: right;
 }
 
@@ -143,6 +178,13 @@ p {
 
 a {
   color: inherit;
+}
+
+#help {
+  z-index: 11;
+  position: relative;
+  padding-right: .7em;
+  transform: translateY(1px);
 }
 
 .price {
@@ -168,7 +210,7 @@ a {
   position: fixed;
   top: 2em;
   z-index: -2;
-}
+  animation: imgLoad 0.35s cubic-bezier(0.190, 1.000, 0.220, 1.000);}
 
 .images img {
   width: 100%;
@@ -185,11 +227,8 @@ a {
 }
 
 .text {
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 100%);
-}
-
-.text > h2 {
-  padding-top: 2em;
+  background-color: white;
+  position: relative;
 }
 
 .score {
@@ -245,4 +284,45 @@ a {
 ::selection {
   color: white;
   background-color: rgba(0, 0, 0, 0.99);
+}
+
+#nav-hint {
+  height: calc(100vh - 2px);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 20;
+  display: none;
+}
+
+#nav-hint > div {
+  border: 1px dashed red;
+}
+
+#nav-hint h5 {
+  padding: 1em;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+#explain {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  width: calc(40% - 2em);
+  font-size: 1em;
+}
+
+#ok {
+  margin-left: 1em;
+  position: absolute;
+  bottom: 1em;
+  border: 1px dashed red;
+  cursor: url("../assets/icons/cursor-x.svg"), pointer;}
+
+#desktop-hint {
+  display: none;
+  opacity: 0.4;
 }

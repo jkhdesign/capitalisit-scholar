@@ -7,6 +7,8 @@
   <title>Capitalist Scholar</title>
   <link rel="stylesheet" href="../../css/global.css" type="text/css">
   <link rel="stylesheet" href="../../css/fonts.css" type="text/css">
+  <link rel="stylesheet" href="../../css/desktop.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,15 +18,23 @@
   </div>
   <div id="read-assist"></div>
   <div id="header">
-    <h5>TOTAL SPENT: <span>$4,280.04</span></h5>
+    <h5><img id="help" src="../../assets/icons/help.svg"/>TOTAL SPENT: <span class="counter" data-count="4270">0</span></h5>
     <h1>Field Notes (&times;3)</h1>
     <div class="price">$9<sup>95</sup></div>
+  </div>
+
+  <div id="nav-hint">
+    <div id="previous"><h5>&larr; Tap or click to go back a page</h5></div>
+    <div id="next">
+      <h5>Tap or click to go forward a page &rarr;</h5>
+      <div id="ok"><h5>&times; Okay</h5></div>
+    </div>
   </div>
 
   <div class="images">
     <img src="../../assets/img/tools-38.jpg" />
     <img src="../../assets/img/tools-40.jpg" />
-    <img src="../../assets/img/tools-41.jpg" />
+    <p id="desktop-hint"><i>More images display on the mobile site. Resize your browser window or navigate to this URL on your phone.</i></p>
   </div>
 
   <div class="reciept">
@@ -60,6 +70,7 @@
     </div>
     </div>
   </div>
+  <script src="../../js/scripts.js"></script>
 </body>
 
 </html>
