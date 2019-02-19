@@ -16,7 +16,7 @@ $(document).ready(() => {
   },
 
   {
-    duration: 3000,
+    duration: 2500,
     easing:'swing',
     step: function() {
       $this.text(Math.floor(this.countNum));

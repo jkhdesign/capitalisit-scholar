@@ -12,6 +12,14 @@
   overflow: hidden;
 }
 
+#outro {
+  font-size: 5em;
+  line-height: .95em;
+  word-break: break-all;
+  overflow: hidden;
+  float:none;
+}
+
 @media only screen and (max-width: 360px) {
   #title-num {
     font-size: 10em;
@@ -35,7 +43,7 @@
     font-size: 1.5em;
   }
 
-  #title-num {
+  #title-num, #outro {
     font-size: 16em;
   }
 

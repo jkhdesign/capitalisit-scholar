@@ -5,7 +5,6 @@
 
 body {
   margin: 2em;
-  margin-bottom: 0;
 }
 
 #header,.reciept,.text, #intro {
@@ -180,6 +179,12 @@ a {
   color: inherit;
 }
 
+h6 {
+  font-size: 1em;
+  font-style: italic;
+  opacity: 0.5;
+}
+
 #help {
   z-index: 11;
   position: relative;
@@ -250,7 +255,6 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1em;
 }
 
 #bar {
@@ -312,7 +316,7 @@ a {
   left: 1em;
   bottom: 1em;
   width: calc(40% - 2em);
-  font-size: 1em;
+  font-size: .8em;
 }
 
 #ok {
