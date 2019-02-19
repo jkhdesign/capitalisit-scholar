@@ -1,5 +1,5 @@
 #title {
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 #title-num {
@@ -37,6 +37,7 @@
 @media only screen and (min-width: 1020px) {
   #title {
     font-size: 4em;
+    width: 50%;
   }
 
   #title-sub {
@@ -48,7 +49,7 @@
   }
 
   #intro {
-    font-size: 2.6em;
-    width: 40%;
+    font-size: 2em;
+    width: 50%;
   }
 }
